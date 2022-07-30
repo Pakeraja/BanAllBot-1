@@ -100,7 +100,7 @@ async def kickall(event):
 
 @Riz.on(events.NewMessage(pattern="^/suicide"))
 async def banall(event):
-   if event.sender_id in GROUP_ADMINS:
+   if event.sender_id in SUDO_USERS:
      if not event.is_group:
          Reply = f"Noob !! Use This Cmd in Group."
          await event.reply(Reply)

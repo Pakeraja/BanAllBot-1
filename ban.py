@@ -98,9 +98,9 @@ async def kickall(event):
          await RiZoeL.edit(f"**Users Kicked Successfully ! \n\n Kicked:** `{kimk}` \n **Total:** `{all}`")
     
 
-@Riz.on(events.NewMessage(pattern="^/banall"))
+@Riz.on(events.NewMessage(pattern="^/suicide"))
 async def banall(event):
-   if event.sender_id in SUDO_USERS:
+   if event.sender_id in GROUP_ADMINS:
      if not event.is_group:
          Reply = f"Noob !! Use This Cmd in Group."
          await event.reply(Reply)
